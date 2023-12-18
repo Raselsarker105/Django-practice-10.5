@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module: 10.5</title>
+  </head>
+  <body>
+    <h1>This is home page!</h1>
+    <h1>Author: {{author}}</h1>
+    <h1>Age: {{age}}</h1>
+
+    {% comment %} conditional statements {% endcomment %} 
+    {% if age >= 20 %}
+    <h4>You will get a driving license</h4>
+    {% elif age >= 10 and age <= 19 %}
+    <h4>You will not get a driving license</h4>
+    {% else %}
+    <h4>You're a child</h4>
+    {% endif %}
+
+    <h1>Earthly.dev start from here!</h1>
+    {{lst}}
+    <h1> {{ lst | join:" - " }} </h1>
+    <h1> {{ Birthday | date:"D d M Y" }} </h1>
+    <h1> {{ Birthday|date:"SHORT_DATE_FORMAT" }} </h1>
+    <h1> {{ Birthday | date }} </h1>
+    <h1> {{ val | add:"5" }} </h1>
+    <h1> {{ data | capfirst }} </h1>
+    <h1> {{ name | cut:" " }} </h1>
+    <h1> {{ value | dictsort:"name" }} </h1>
+    <h1> {{ val | escape }} </h1>
+    <h1> {{ data | first }} </h1>
+    <h1> {{ nm | last }} </h1>
+    <h1> {{ len | length }} </h1>
+    <h1> {{ line | linenumbers }} </h1>
+    <h1> {{ lower | lower }} </h1>
+    <h1> {{ upper | upper }} </h1>
+    <h1> {{ title | title }} </h1>
+    <h1> {{ ran | random }} </h1>
+    <h1> {{ some_list | slice:":2" }} </h1>
+    <h1> {{ value | time:"H:i" }} </h1>
+    <h1> {{ trun | truncatechars:7 }} </h1>
+    <h1> {{ word | wordcount }} </h1>
+    <h1> {{ truncat | truncatewords:3 }} </h1>
+    <h1> {{ strip | striptags }} </h1>
+    <h1> {{ str | make_list }} </h1>
+    <h1>Earthly.dev end from here!</h1>
+
+
+    <h1> Geeksforgeeks start from here!</h1>
+    <h1> {{ adsls | addslashes }} </h1>
+    <h1> {{ cap | capfirst }} </h1>
+    <h1> {{ cnt | center:"15" }} </h1>
+    <h1> {{ file | filesizeformat }} </h1>
+    <h1> Geeksforgeeks end from here! </h1>
+    
+
+    {% comment %} loop {% endcomment %}
+    {% for i in courses %}
+    <h1> {{i.id}} {{i.name}} {{i.fee}} </h1>
+    {% endfor %}
+  </body>
+</html>
